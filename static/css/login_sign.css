@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca|Libre+Caslon+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+}
+
+/* .clear {
+  clear: both;
+} */
+
+/* h2 {
+  font-family: 'Prata', serif;
+text-transform: uppercase;
+  font-variant: small-caps;
+  font-size: 2.5em;
+  font-weight: 300;
+} */
+
+.form-container {
+  box-shadow: 0 25px 100px -35px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 300px;
+}
+
+.form-container-edit-meeting{
+  width: 600px;
+}
+
+.active-form {
+  animation-fill-mode: forwards;
+  animation: show-form 300ms 1 cubic-bezier(0.64, 0.31, 0.16, 0.85);
+}
+
+.inactive-form {
+  animation-fill-mode: forwards;
+  animation: hide-form 300ms 1 cubic-bezier(0.64, 0.31, 0.16, 0.85);
+}
+
+.signup-form, .signin-form {
+  padding: 25px;
+  display: block;
+}
+
+.title {
+  margin: 10px 10px 0 10px;
+}
+
+.text {
+  font-size: 0.8em;
+  margin: 0 10px;
+}
+
+.username, .email, .password {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #eeeeee;
+  color: #000000;
+  font-family: 'Lexend Deca', sans-serif;
+  box-shadow: 0 10px 15px -15px rgba(0, 0, 0, 0.3);
+  transition: padding 200ms ease;
+  cursor: text;
+}
+
+button {
+  margin: 15px 0;
+  padding: 10px 15px;
+  width: 100%;
+  font-family: 'Lexend Deca', sans-serif;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: #ff4800;
+  color: #eeeeee;
+  box-shadow: 0 10px 25px -10px rgba(246, 201, 14, 0.8);
+  cursor: pointer;
+  font-weight: 700;
+  transition: 200ms ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+#signin-transition, #signup-transition {
+  display: inline-block;
+  box-shadow: 0 12px 25px -10px rgba(246, 201, 14, 0.8);
+  font-size: 0.7em;
+  margin: 0 10px;
+  text-align: center;
+}
+
+#signin-transition a, #signup-transition a {
+  font-weight: bold;
+  color: #303841;
+}
+
+.edit {
+  width : 20%;
+}
+

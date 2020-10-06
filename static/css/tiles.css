@@ -1,0 +1,32 @@
+.main {
+/*    width: fit-content(20em);
+    height: fit-content(20em);
+*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: fit-content;
+    /*max-width: 750px;*/
+    box-shadow: 5px 0px 10px #aaaaaa;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .upcoming{
+    background-color: #eeeeee;
+  }
+
+  .past {
+    background-color: #eeeeee;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .histo {
+    padding: 25px;
+  }
