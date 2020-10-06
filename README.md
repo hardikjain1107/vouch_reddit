@@ -24,11 +24,37 @@ Django app to show posts , top domains , top users on reddit using api
 * py manage.py runserver
 
 
-## Snippets
+## Screenshots
 
-### Home page
+### Login_page
+![](https://github.com/hardikjain1107/vouch_reddit/blob/main/vouch_snippets/login.png)
 
-![]()
+
+### Home_Page 
+![](https://github.com/hardikjain1107/vouch_reddit/blob/main/vouch_snippets/home.png)
+
+
+
+### Subreddits suscribed
+![](https://github.com/hardikjain1107/vouch_reddit/blob/main/vouch_snippets/suscribed_subreddits.png)
+
+
+
+### Top_Posts
+![](https://github.com/hardikjain1107/vouch_reddit/blob/main/vouch_snippets/posts.png)
+
+
+
+### Top_Users
+![](https://github.com/hardikjain1107/vouch_reddit/blob/main/vouch_snippets/top_users.png)
+
+
+
+### Top_Domains
+![](https://github.com/hardikjain1107/vouch_reddit/blob/main/vouch_snippets/top_domains.png)
+
+
+
 
 
 
