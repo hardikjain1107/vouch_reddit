@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<title>Show Reddit</title>
+{% endblock %}
+
+
+{% block content %}
+Hi {{ user.username }}!
+
+<h1>Subreddits</h1>
+
+{% for sub_reddit in user_subreddits %}
+<h3>{{ sub_reddit }}</h3>
+{% endfor %}
+
+<h1>Top Posts</h1>
+
+<div class='post-container'>
+	{% for post in posts %}
+	<div class="card past">
+        <div class="content">
+			<div class = 'reddit-post'>
+				<blockquote class="reddit-card"><a href="{{ post.link }}"></a> </blockquote>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+<h1>Top Users</h1>
+
+<div class='usercount'>
+<table>
+	<thead>
+		<tr>
+			<th>User</th>
+			<th>Count</th>
+		</tr>
+	</thead>
+{% for user_details in user_counts %}
+	<tbody>
+		<tr>
+			<td>{{ user_details.author }}</td>
+			<td>{{ user_details.count }}</td>
+		</tr>
+	</tbody>
+{% endfor %}
+</table>
+</div>
+
+
+<h1>Top Domains</h1>
+<div class='domaincount'>
+<table>
+	<thead>
+		<tr>
+			<th>Domain</th>
+			<th>Count</th>
+		</tr>
+	</thead>
+{% for user_details in domain_counts %}
+	<tbody>
+		<tr>
+			<td>{{ user_details.domain }}</td>
+			<td>{{ user_details.count }}</td>
+		</tr>
+	</tbody>
+{% endfor %}
+</table>
+</div>
+<script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
+
+{% endblock %}

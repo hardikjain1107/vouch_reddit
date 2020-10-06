@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  
+  <link href="{% static 'lib/fonts/gfonts' %}" rel="stylesheet" >
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/tiles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/login_sign.css' %}">
+
+  {% block header %}
+  {% endblock %}
+
+</head>
+<body data-spy="scroll" data-target="#navbar-example">
+        <header>
+          <div id="sticker" class="header-area stick">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-12">
+      
+                  <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                                              <span class="sr-only">Toggle navigation</span>
+                                              <span class="icon-bar"></span>
+                                              <span class="icon-bar"></span>
+                                              <span class="icon-bar"></span>
+                                          </button>
+                      <a class="navbar-brand sticky-logo" href="/">
+                        <h1><span>V</span>ouch</h1>
+                      </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                      <ul class="nav navbar-nav navbar-right">
+                        {% if user.is_authenticated %}
+                          <li>
+                            <a href="#" >{{ user.username }}</a>
+                          </li>
+                        {% endif %}
+                        <li>
+                        	{% if user.is_authenticated %}
+                            <a  href="{% url 'show_reddit' %}">Show Reddit</a>
+            							{% else %}
+            								<a  href="accounts/reddit/login/?process=login">Login With Reddit</a>
+            							{% endif %}
+                          {% if user.is_authenticated %}
+                            <li>
+                              <form id = 'logoutForm' method="POST" action="{% url 'account_logout' %}">
+                                {% csrf_token %}
+                              </form>
+                              <a class="page-scroll" onclick="document.forms['logoutForm'].submit()">Logout</a>                            
+                            </li>
+                          {% endif %}
+                        </li>
+                       </ul>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+ 
+        <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'lib/jquery/jquery1.min.js' %}"></script>
+        <script src="{% static 'lib/jquery/jquery2.min.js' %}"></script>
+
+    <br><br><br><br>
+		{% block content %}
+    {% endblock %}
+
+
+    </body>            
+</html>
