@@ -48,27 +48,6 @@ Hi {{ user.username }}!
 {% endfor %}
 </table>
 </div>
-
-
-<h1>Top Domains</h1>
-<div class='domaincount'>
-<table>
-	<thead>
-		<tr>
-			<th>Domain</th>
-			<th>Count</th>
-		</tr>
-	</thead>
-{% for user_details in domain_counts %}
-	<tbody>
-		<tr>
-			<td>{{ user_details.domain }}</td>
-			<td>{{ user_details.count }}</td>
-		</tr>
-	</tbody>
-{% endfor %}
-</table>
-</div>
 <script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
 
 {% endblock %}

@@ -6,8 +6,9 @@
 
 {% block content %}
 	{% if user.is_authenticated %}
-		<h3>Hi {{ user.username }}!</h3>
+		Hi {{ user.username }}!
 	{% else %}
-		<h3><a  href="accounts/reddit/login/?process=login">Login With Reddit</a></h3>
+		login
+		{# <a href="{% url 'login' %}">Login Using Reddit</a> #}
 	{% endif %}
 {% endblock %}

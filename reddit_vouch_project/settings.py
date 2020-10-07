@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +26,7 @@ SECRET_KEY = ')cheruc6&$12!@4dys=peqiqn(l4q-d8cmha0u!dr0jzs=usr_'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -157,5 +156,3 @@ LOGOUT_REDIRECT_URL = '/'
 API_BASE_URL = 'https://oauth.reddit.com/'
 
 SITE_ID = 1
-
-django_heroku.settings(locals())
